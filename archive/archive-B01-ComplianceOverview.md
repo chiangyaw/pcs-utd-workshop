@@ -36,20 +36,26 @@ Note: This is a standalone activity and is not dependent on other activities.
 
     ![alt text](/resouces/pcs-screen-107.png)
 
-### Download Compliance Report
-    
-Note: The lab uses a read-only user, which doesn’t have access to generate a compliance report. Therefore, we'll only run through the steps to download a compliance report.
-
+### Generate Compliance Report
 1. Go to Prisma Cloud Enterprise > Cloud Security > Reports
 2. On this page, you will see all the different reports created by existing users or yourself, either for one time usage or regular schedule.
 
     ![alt text](/resouces/pcs-screen-108.png)
 
-3. On the search bar, type "NIST". Click on the Download icon in the Action column to download the report.
+3. Click on Create Report on the top right corner, and Cloud Security Report.
 
-    ![alt text](/resources/pcs-screen-111.png)
+    ![alt text](/resouces/pcs-screen-109.png)
 
-    Note: As you're accessing Prisma Cloud via a full screen remote desktop, you're might not be able to view the downloaded document. For a sample NIST report, you can refer to a sample document [here](/resouces/NIST_SAMPLE_REPORT.pdf).
+    Notes: The lab uses a read-only user, which doesn’t have access to generate a compliance report. The steps below describe methods to generate cloud security report, which uses a similar procedures.
 
-    Note: You can schedule a compliance report to be sent to specific team or team members in a regular basis (weekly, daily, etc).
+4. On the popped out window, insert the following details:
+    
+    Name: UTD Report - <Your own Name/Initial>
+    Email Address: <your email address>
+    Widget Date Range: Past 60 Days
+    Schedule: One Time
+
+    Click Save Report when you're done.
+
+    ![alt text](/resouces/pcs-screen-110.png)
 
