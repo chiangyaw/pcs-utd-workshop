@@ -64,14 +64,21 @@ Here are also a list of applications that are accessible via Application Portal 
 Below are the steps to access the Application Portal:
 1. Select the Application Portal tab to open the portal.
 2. Credentials: kasm_user/p@lo@lto
-![alt text](/resouces/applicationportal-login-1.png)
+
+    ![alt text](/resouces/applicationportal-login-1.png)
+
 3. Once logged in, when you click inside the page, allow the clipboard permission when prompted.
-![alt text](/resouces/applicationportal-login-2.png)
+
+    ![alt text](/resouces/applicationportal-login-2.png)
+
 4. Below are some screenshots of the interface.
-![alt text](/resouces/applicationportal-login-3.png)
+    
+    ![alt text](/resouces/applicationportal-login-3.png)
+
 5. Important: This is a browser in browser setup running as a Docker container. DO NOT open more than 3-4 browser tabs at the same time as it may cause resource exhaustion on the Docker workstation VM.
 6. If due to inactivity, you see a blue screen when you access the Application Portal, click on “Connect” option
-![alt text](/resouces/applicationportal-login-4.png)
+    
+    ![alt text](/resouces/applicationportal-login-4.png)
 
 ### Kubernetes VM Overview
 The Kubernetes VM provided in this workshop is running a single node Kubenetes cluster launched via k3s. Within the lab, you will be working with this VM to perform various things such as deploying Prisma Cloud defender, Argo CD, running log4j attacks etc.

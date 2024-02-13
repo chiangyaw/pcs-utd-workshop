@@ -1,4 +1,4 @@
-![alt text](/resources/PRISMA_CLOUD_LOGO_color_dark_background.png?raw=true)
+![alt text](/resouces/PRISMA_CLOUD_LOGO_color_dark_background.png)
 # Prisma Cloud Ultimate Test Drive (UTD) Workshop
 ## Prisma Cloud by Palo Alto Networks
 
