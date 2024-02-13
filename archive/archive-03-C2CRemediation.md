@@ -17,80 +17,80 @@ Hint: As you navigate the alerts view in the Prisma Cloud console you can click 
 2. Set the following filters (you can add additional filter by clicking on the Add Filter button):
     * Time Range = All Time
     * Policy Name = SQL and Code Injection attacks were detected
-![alt text](/resouces/pcs-screen-23.png)
+![alt text](/resources/pcs-screen-23.png)
 Notes: SQL and Code Injection attacks were detected is a custom search policy and Alert rule that was created for the purpose of the lab by leveraging out of the box Prisma Cloud policies. This is done for ease of use and convenience of lab experience. As a user, you can also create custom policy as such to meet your organization needs.
 3. Click on the **SQL and Code Injection attacks were detected** result and click on the Sales and Trading cnsp-eu under Asset Name column.
-![alt text](/resouces/pcs-screen-24.png)
+![alt text](/resources/pcs-screen-24.png)
 4. This should bring up details about this instance and contains more findings and information about the attacks.The Overview tab contains the overview of this VM. Clicking on the Attack Path will reveal how the attack occurred and the resources involved in it.
 Note: If you do not see the same graph as in the below screenshot, then it’s possible that the resource is involved in more than once incident and an alert. You can change the view by clicking on the Alert dropdown menu and selecting SQL and Code Injection attacks were detected as shown in the below screenshot
-![alt text](/resouces/pcs-screen-25.png)
-![alt text](/resouces/pcs-screen-26.png)
+![alt text](/resources/pcs-screen-25.png)
+![alt text](/resources/pcs-screen-26.png)
 5. Within the graph, you can see the traffic flow and the complete attack path. The traffic enters through the **Internet Gateway** and hits the **Sales and Trading EC2** instance. This instance has an IAM role **sales-trading-admin-role-cnsp-eu** attached to it, which has wildcard access to S3 bucket and also access to **prisma-cloud-pcds-bucket** S3 Bucket. As this instance is vulnerable to SQL and Code injection attacks, the attacker can potentially perform a Data exfiltration from the S3 bucket through the compromised host. This is represented by the Attack Path.
 6. Within the graph, clicking on the Vulnerabilities Icon and clicking on any Vulnerability will provide more information about the vulnerability. On the selected Vulnerability. clicking on View Details will open an additional findings sidecar.
-![alt text](/resouces/pcs-screen-27.png)
-![alt text](/resouces/pcs-screen-28.png)
+![alt text](/resources/pcs-screen-27.png)
+![alt text](/resources/pcs-screen-28.png)
 7. Clicking on Assets will show more information about the affected assets. Once done, close the CVE Sidecar.
-![alt text](/resouces/pcs-screen-29.png)
+![alt text](/resources/pcs-screen-29.png)
 8. Clicking on Audit Trail will show more information about what changes occurred at the resource level and the timeline. Alerts tab will show all the alerts that are that this resource is currently involved in. The Findings tab shows the findings for this specific resource.
-![alt text](/resouces/pcs-screen-30.png)
+![alt text](/resources/pcs-screen-30.png)
 9. Within the Sales and Trading cnsp-eu VM sidecar, click on the Vulnerabilities tab to see all the Vulnerabilities that were detected for this VM. Further clicking on options such as Critical & High , Exploitable and Patchable will filter the results.
-![alt text](/resouces/pcs-screen-31.png)
+![alt text](/resources/pcs-screen-31.png)
 10. Navigate back to the Attack Path graph (and make sure that the “SQL and Code Injection attacks were detected” alert is selected). Let’s further investigate the Attack Path in the graph and examine the blast radius.
-![alt text](/resouces/pcs-screen-32.png)
+![alt text](/resources/pcs-screen-32.png)
 11. Within the graph, click on the S3 Bucket prisma-cloud-pcds-bucket by clicking on it and clicking on View Details
-![alt text](/resouces/pcs-screen-33.png)
-![alt text](/resouces/pcs-screen-34.png)
+![alt text](/resources/pcs-screen-33.png)
+![alt text](/resources/pcs-screen-34.png)
     * Here you can see the S3 Bucket details. Head over to the Alerts tab in the S3 Bucket details and here you will see that there’s an alert for this bucket Storage Asset with sensitive data found. Do not click on the Policy Name as clicking on the Policy Name as you will be navigated to another page. Once done looking at Alerts, close the Alert window
-    ![alt text](/resouces/pcs-screen-35.png)
+    ![alt text](/resources/pcs-screen-35.png)
     * Within the S3 Bucket page, click on Objects. Here you can see the list of all the objects that reside in that S3 Bucket and these are at the risk of being exfiltrated as a result of the SQL and Code injection attacks. If you click on PII_Health_IP_with_multiline.txt.txt and head over to Attributes, you can see that this file contains sensitive Personal Identifiable information.
-    ![alt text](/resouces/pcs-screen-36.png)
-    ![alt text](/resouces/pcs-screen-37.png)
+    ![alt text](/resources/pcs-screen-36.png)
+    ![alt text](/resources/pcs-screen-37.png)
     * Here, Prisma Cloud has identified that there’s sensitive data stored within the S3 Bucket that the compromised host has access to and is at risk of data exfiltration. To identify and detect confidential and sensitive data, Prisma Cloud Data Security integrates with Palo Alto Network's Enterprise DLP service and provides built-in data profiles, which include data patterns that match sensitive information such as PII, health care, financial information and Intellectual Property.
     * On the bucket, if you go to page 3, you can see more findings and clicking on 22_all_patterns_test.txt will show you more findings
-    ![alt text](/resouces/pcs-screen-38.png)
+    ![alt text](/resources/pcs-screen-38.png)
 12. Close the Snippets pop up. Close the Object sidecar and close the S3 bucket sidecar. Close the Sales and Trading cnsp-eu sidecar
-![alt text](/resouces/pcs-screen-39.png)
+![alt text](/resources/pcs-screen-39.png)
 13. In the SQL and Code injection attacks were detected Alert window, click on the value corresponding to the Alert ID column. In the next windows, click on the Evidence tab.
-![alt text](/resouces/pcs-screen-40.png)
-![alt text](/resouces/pcs-screen-41.png)
+![alt text](/resources/pcs-screen-40.png)
+![alt text](/resources/pcs-screen-41.png)
 14. Click on the SQL Injection and click on View Additional Finding Details. You will now be directed to the Prisma Cloud Runtime Security WaaS (Web Application and API Security) console, which was responsible for detecting this attack. Here we will be able to see more information about the attack.
-![alt text](/resouces/pcs-screen-42.png)
+![alt text](/resources/pcs-screen-42.png)
 Note: Below screenshot might look different in your case as some menus are collapsed to fit the screenshot in the page.
-![alt text](/resouces/pcs-screen-43.png)
+![alt text](/resources/pcs-screen-43.png)
 15. Click on the SQL Injection number to bring up the Aggregated WaaS Events for that attack type.
-![alt text](/resouces/pcs-screen-44.png)
+![alt text](/resources/pcs-screen-44.png)
 16. As you can see, attacks are detected and the effect is set to Alert. This can be changed to Prevent to prevent the attacks. But we will not be performing that action in this lab but we will show how it can be achieved.
 17. If you scroll further down, you can see which rule is responsible for detecting the attacks and this would be finance-eks-cluster-waas-policy. Click on the rule and select Yes for the pop up dialogue.
-![alt text](/resouces/pcs-screen-45.png)
+![alt text](/resources/pcs-screen-45.png)
 18. Click on the rule and click on the item under App List
-![alt text](/resouces/pcs-screen-46.png)
+![alt text](/resources/pcs-screen-46.png)
 19. Click on the App Firewall tab and you should see the SQL Injection and other items (Grayed out because the lab role is a read-only role and doesn’t have permissions to change settings), which can be set to Prevent or Ban to prevent these attacks
-![alt text](/resouces/pcs-screen-47.png)
+![alt text](/resources/pcs-screen-47.png)
 
 2. Click **Add Filter**, choose **Policy Name**. On the Policy Name Filter, click on **Select** and type **UTD** on the search bar, and tick **UTD SQL and Code Injection Attacks**.
-![alt text](/resouces/pcs-screen-13.png)
+![alt text](/resources/pcs-screen-13.png)
 
-![alt text](/resouces/pcs-screen-14.png)
-![alt text](/resouces/pcs-screen-15.png)
+![alt text](/resources/pcs-screen-14.png)
+![alt text](/resources/pcs-screen-15.png)
 3. Click on the **Alert ID** to access the details on the specific alert.
-![alt text](/resouces/pcs-screen-16.png)
+![alt text](/resources/pcs-screen-16.png)
 4. Click into each of the items on the Evidence tab, and review the details of the attack path alert.
     * AWS EC2 instance that is internet reachable with unrestricted access (0.0.0.0/0)
-    ![alt text](/resouces/pcs-screen-17.png)
+    ![alt text](/resources/pcs-screen-17.png)
     * SQL and Code Injection detected in HTTP traffic
-    ![alt text](/resouces/pcs-screen-18.png)
+    ![alt text](/resources/pcs-screen-18.png)
     * AWS EC2 Instance not configured with Instance Metadata Service v2 (IMDSv2)
-    ![alt text](/resouces/pcs-screen-19.png)
+    ![alt text](/resources/pcs-screen-19.png)
     * EC2 with IAM role attached has s3:GetObject and s3:ListBucket permissions
-    ![alt text](/resouces/pcs-screen-20.png)
+    ![alt text](/resources/pcs-screen-20.png)
     All the findings contributed to an attack path, which might lead to a data breach in the customer environment. Prisma Cloud detects what might potentially go wrong (misconfiguration) and what has already gone wrong (actual attack), and combining these information on the same single plane of glass. By having this information detected by Prisma Cloud, users can choose different ways to remediate the risks discovered.
 
 ### Remediation
 1. Click on triangle icon with **AWS EC2 Instance not configured with Instance Metadata Service v2 (IMDSv2)**
-![alt text](/resouces/pcs-screen-21.png)
+![alt text](/resources/pcs-screen-21.png)
 2. On the popped out window, it shows a few different way to remediate the misconfiguration:
     * Fix in Cloud - click the **Fix in Cloud** button, allowing the user to fix the misconfiguration directly on the cloud environment, by either click on **Execute Command** button, or copying the CLI command and run it on cloud shell. 
-    ![alt text](/resouces/pcs-screen-22.png)
+    ![alt text](/resources/pcs-screen-22.png)
     Note: You do not need to click on the execute command button
     * Fix in Code - click on the **Fix in Code** button, allowing the user to fix the misconfiguration on Infrastructure as Code (IaC).
     * Manual Fix - click on the **Manual Fix** button, allowing the user to open a ticket for this misconfiguration so that the right team (workload owner) could assist on remediating the misconfiguration.

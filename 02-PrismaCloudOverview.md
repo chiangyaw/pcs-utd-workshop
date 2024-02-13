@@ -12,20 +12,20 @@ Note: This is a standalone activity and is not dependent on other activities.
 ### Log in to Prisma Cloud Enterprise Edition Console
 1. Click on the Prisma Cloud Enterprise tab to open the demo tenant login.
 
-    ![alt text](/resouces/pcs-screen-1.png)
+    ![alt text](/resources/pcs-screen-1.png)
 
 2. Follow the screen to login and then click on the Prisma Cloud icon.
     
     *Note: If you see a page expired message then refresh the web page by clicking on the Home button as highlighted in below screen capture.*
 3. While using the Prisma Cloud console, you can use CloudShare > Keyboard > Home | Back | Forward to navigate back and forth.
 
-    ![alt text](/resouces/pcs-screen-2.png)
+    ![alt text](/resources/pcs-screen-2.png)
 
 4. To check the on-boarded public cloud accounts click on the Settings on the and select Account Groups. Click on the 4 Cloud Account(s) under Default Account Group. You can see the public cloud accounts connected to this Prisma Cloud demo account.
 Note: The screenshots captured in this workshop guide might vary slightly from the actual lab account.
 
-    ![alt text](/resouces/pcs-screen-3.png)
-    ![alt text](/resouces/pcs-screen-4.png)
+    ![alt text](/resources/pcs-screen-3.png)
+    ![alt text](/resources/pcs-screen-4.png)
 
     We have already connected AWS, Azure and GCP accounts to this Prisma Cloud tenant, and this lab account can be used for testing across all three public cloud providers. Prisma Cloud also supports Alibaba Cloud & Oracle Cloud Infrastructure.
     
