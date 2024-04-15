@@ -94,4 +94,4 @@ ssh sysadmin@<external address>
 ```
 ![alt text](/resources/cloudshare-screen-4.png)
 
-Once you are able to access the items above, you can move on to the next section [here](02-PrismaCloudOverview.md)!
+Once you are able to access the items above, you can move on to the next section [here](/02-Assignment-1-1.md)!
