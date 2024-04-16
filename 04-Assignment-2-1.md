@@ -162,6 +162,58 @@ alias kubectl='k3s kubectl'
 kubectl get pods -A
 ```
 
+#### Setup Prisma Cloud Defender in Kubernetes
+1. Login via SSH to the Kubernetes VM.
+
+2. Run the command to examine the setup script:
+```
+cat /home/sysadmin/apps/02-install-defender.sh
+```
+
+3. When ready, run the script:
+```
+bash /home/sysadmin/apps/02-install-defender.sh
+```
+![alt text](/resources/k8s-screen-22.png)
+
+4. Run the following command to see the status of the defender deployment:
+```
+kubectl -n twistlock get pod -o wide
+```
+![alt text](/resources/k8s-screen-23.png)
+
+5. Head over to Prisma Cloud Compute Edition Console > Manage > Defenders to verify the successful deployment. It might take 1-2 mins for the defender to show up as active.
+
+![alt text](/resources/pcce-screen-53.png)
+
+6. Navigate to Prisma Cloud Compute Edition Console > Radars > Hosts to see the newly added Kubernetes host. If you don’t see it yet, click on the Refresh icon.
+
+![alt text](/resources/pcce-screen-54.png)
+
+7. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
+
+#### Deploy QA App on Kubernetes Cluster
+1. Login via SSH to the Kubernetes VM.
+
+2. Run the following command to see the application that we are
+deploying:
+```
+cat /home/sysadmin/apps/02-qa-argo-app.yaml
+```
+
+3. When ready, apply manifest:
+```
+kubectl apply -f /home/sysadmin/apps/02-qa-argo-app.yaml
+```
+
+4. It takes about 1-2 mins for the application to be ready. You can run the following to check on the status:
+```
+kubectl -n qa get pods -w
+```
+![alt text](/resources/k8s-screen-24.png)
+
+*Note: The activities below would not require you to access the Bank of Anthos application. However, you can still navigate to the Application Portal and access the bank-of-anthos application.*
+
 #### Check Container Model States
 1. Head over to Kubernetes VM and run the below commands to understand the setup and workloads that we’ll be investigating.
 
