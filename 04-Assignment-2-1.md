@@ -192,6 +192,25 @@ kubectl -n twistlock get pod -o wide
 
 7. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
 
+#### Setup Kubernetes Auditing and Admission Control
+Kubernetes Auditing and Admission Control allows you to setup create security guardrails in your Kubernetes environment by enforcing policies such as protecting against misconfigured or overprivileged pods etc.
+
+1. Navigate to Prisma Cloud Compute Edition Console > Defend > Access and select Kubernetes tab and enable Kubernetes auditing.
+
+![alt text](/resources/pcce-screen-55.png)
+
+2. Click on Add Rule > Select from existing rules
+
+![alt text](/resources/pcce-screen-56.png)
+
+3. Select all the rules in the and click on Add
+
+![alt text](/resources/pcce-screen-57.png)
+
+4. Navigate to Prisma Cloud Compute Edition Console > Defend > Access and select Admission tab and enable Admission Control.
+
+![alt text](/resources/pcce-screen-59.png)
+
 #### Setup ArgoCD
 Argo CD is a continuous delivery tool that lets you deploy your application on a Kubernetes cluster. We will be using Argo CD to deploy Bank-Of-Anthos application from the previous activities on our Kubernetes cluster.
 
