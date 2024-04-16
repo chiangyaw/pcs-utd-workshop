@@ -192,6 +192,25 @@ kubectl -n twistlock get pod -o wide
 
 7. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
 
+#### Setup ArgoCD
+Argo CD is a continuous delivery tool that lets you deploy your application on a Kubernetes cluster. We will be using Argo CD to deploy Bank-Of-Anthos application from the previous activities on our Kubernetes cluster.
+
+1. Run the command to examine the ArgoCD setup script, which sets up required kubernetes namespaces and other things: 
+```
+cat /home/sysadmin/apps/01-argo-setup.sh
+```
+
+2. When ready, run the script:
+```
+bash /home/sysadmin/apps/01-argo-setup.sh
+```
+![alt text](/resources/k8s-screen-25.png)
+
+3. Once the script executes successfully, scroll down to the end of the script output to retrieve the login credentials. 
+![alt text](/resources/k8s-screen-27.png)
+
+*Note: You are not required to login to ArgoCD GUI for the activities below. However, you can still login with the GUI with the login credentials. You can head over to Application Portal > ArgoCD tile and login using the credentials.*
+
 #### Deploy QA App on Kubernetes Cluster
 1. Login via SSH to the Kubernetes VM.
 
