@@ -18,6 +18,4 @@ Prisma Cloud, by Palo Alto Networks, is a Cloud Native Application Protection Pl
     Surface threats and protect applications against anomalies, malware and defend against zero-day attacks
 
 For more information on Prisma Cloud, you can contact your local Palo Alto Networks sales rep, or visit our website [here](https://www.paloaltonetworks.com/prisma/whyprisma).
-
-If you still have time, you can continue with our bonus lab section [here]
         
