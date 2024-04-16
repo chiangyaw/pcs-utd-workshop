@@ -143,8 +143,24 @@ PCC features to be used:
 * Runtime defense for file systems
 
 In this activity you will:
+* Setup Kubernetes Cluster
 * Create runtime policies for Process, Network and File System.
 * Test and review event logs to confirm activity
+
+#### Setup Kubernetes Cluster
+1. Login via SSH to the Kubernetes VM.
+
+2. Run the following script to setup your Kubernetes cluster (it will take approximately less than 2 mins for the creation to be complete):
+```
+bash /home/sysadmin/apps/00-k3s-setup.sh
+```
+![alt text](/resources/k8s-screen-21.png)
+
+3. Once done, run the below commands to verify that everything is working:
+```
+alias kubectl='k3s kubectl'
+kubectl get pods -A
+```
 
 #### Check Container Model States
 1. Head over to Kubernetes VM and run the below commands to understand the setup and workloads that we’ll be investigating.
