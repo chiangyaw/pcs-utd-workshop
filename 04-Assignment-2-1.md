@@ -344,16 +344,16 @@ kubectl -n qa exec -it deploy/manual-run -- bash /opt/manual-run.sh
     * Under Denied & all other processes, set the first 2 items to Prevent under Anti-malware and exploit prevention and the last 2 to block
     * Under explicitly denied processes, specify the following processes and set the rule to Prevent:
         - /bin/netcat
-        - /opt/xmrig-96.19.2/xmrig
+        - /opt/xmrig-6.19.2/xmrig
         - /bin/nc.traditional
 
 ![alt text](/resources/pcce-screen-23.png)
 
 5. Network-Monitoring - Click on the Networking tab
 ![alt text](/resources/pcce-screen-24.png)
-    * Under Denied & all other network activity, set the outbound IP to 1.1.1.1 and set the Outbound IPs effect to Block
+    * Under Denied & all other network activity, set the outbound IP to ```1.1.1.1``` and set the Outbound IPs effect to Block
     * Scroll down to the DNS Section and enable it.
-    * Under Denied and all other domains, set the following domain: btc.ss.poolin.me and set the Domains effect to Prevent
+    * Under Denied and all other domains, set the following domain: ```btc.ss.poolin.me``` and set the Domains effect to Prevent
     ![alt text](/resources/pcce-screen-25.png)
 
 6. File-system Monitoring - Click on File-System tab
@@ -510,15 +510,16 @@ In this activity you will:
 kubectl apply -f /home/sysadmin/apps/03-log4j.yaml
 ```
 
-    ![alt text](/resources/k8-screen-10.png)
+![alt text](/resources/k8s-screen-10.png)
 
 2. Monitor the Pods and wait until they are fully Running:
 ```
 kubectl get pods -w
 ```
-    Once they are running, you can press CTRL+C to exit out of the previous command and proceed with next steps
 
-![alt text](/resources/k8-screen-11.png)
+Once they are running, you can press CTRL+C to exit out of the previous command and proceed with next steps
+
+![alt text](/resources/k8s-screen-11.png)
 
 3. As part of the log4j attack, a malware sample is downloaded to /tmp directory. Before we run the attack, let’s make sure there’s no malware (file named as malware-sample):
 ```
