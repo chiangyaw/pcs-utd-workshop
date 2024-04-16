@@ -227,7 +227,7 @@ kubectl apply -f /home/sysadmin/apps/02-qa-argo-app.yaml
 
 4. It takes about 1-2 mins for the application to be ready. You can run the following to check on the status:
 ```
-kubectl -n qa get pods -w
+kubectl -n qa get pods
 ```
 ![alt text](/resources/k8s-screen-24.png)
 
