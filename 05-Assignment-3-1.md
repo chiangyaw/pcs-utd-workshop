@@ -23,7 +23,7 @@ Through 'CI/CD Risks', you can view an inventory and description of the CI/CD ri
     
     * Expanding the individual items within the graph will provide more information.
     
-    ![alt text](/resources/App_Repo_tech_Graph_Expand.png)
+    ![alt text](/resources/App_Repo_Tech_Graph_Expand.png)
 
 3. Within Prisma Cloud > Application Security > CICD > CICD Risks , we can get visibility into your CICD environments that are connected to Prisma Cloud.
 
@@ -35,11 +35,11 @@ Through 'CI/CD Risks', you can view an inventory and description of the CI/CD ri
 
 5. Here you can see the Risk Location in the Delivery Chain, which shows where this alert/attack fits in into the software delivery chain. You can also see further Details and Description of this Vulnerability/Alert and also Steps to Solve.
 
-    ![alt text](/resources/App_CICD_Overview.png)
+    ![alt text](/resources/App_CICD__Overview.png)
 
 6. Clicking on Open Events will show other alerts as well
 
-    ![alt text](/resources/App_CICD_OpenEvents.png)
+    ![alt text](/resources/App_CICD__OpenEvents.png)
 
 7. Exploring other alerts will show more information.
 
