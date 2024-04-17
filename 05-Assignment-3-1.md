@@ -5,6 +5,8 @@ Prisma Cloud CI/CD Security covers a set of predefined rules that aim to identif
 
 Through 'CI/CD Risks', you can view an inventory and description of the CI/CD risks detected in a scan, including their severity and the potential impact of the risk. You can remediate risks events by applying suggested solutions or suppress them if you do not want not to actively address them. In addition you can view a Kill Chain graph, which visualizes the stages of a cyber attack on the repository CI/CD pipeline.
 
+For this you will need to log into another tenant. Details shared by the instructor separately.
+
 #### CI/CD Risks
 1. When you select Prisma Cloud > Application Security > Visibility > Repositories, you will see all the repos that are on boarded onto Prisma Cloud.
 
