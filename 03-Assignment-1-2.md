@@ -22,7 +22,7 @@ Hint: As you navigate the alerts view in the Prisma Cloud console you can click 
     ![alt text](/resources/pcs-screen-23.png)
 
 Notes: SQL and Code Injection attacks were detected is a custom search policy and Alert rule that was created for the purpose of the lab by leveraging out of the box Prisma Cloud policies. This is done for ease of use and convenience of lab experience. As a user, you can also create custom policy as such to meet your organization needs.
-3. Click on the **SQL and Code Injection attacks were detected** result and click on the Sales and Trading cnsp-eu under Asset Name column.
+3. Click on the **SQL and Code Injection attacks were detected** result and click on the Sales and Trading cnsp-app4 under Asset Name column.
     
  ![alt text](/resources/pcs-screen-24.png)
 
@@ -32,7 +32,7 @@ Note: If you do not see the same graph as in the below screenshot, then it’s p
     ![alt text](/resources/pcs-screen-25.png)
     ![alt text](/resources/pcs-screen-26.png)
 
-5. Within the graph, you can see the traffic flow and the complete attack path. The traffic enters through the **Internet Gateway** and hits the **Sales and Trading EC2** instance. This instance has an IAM role **sales-trading-admin-role-cnsp-eu** attached to it, which has wildcard access to S3 bucket and also access to **prisma-cloud-pcds-bucket** S3 Bucket. As this instance is vulnerable to SQL and Code injection attacks, the attacker can potentially perform a Data exfiltration from the S3 bucket through the compromised host. This is represented by the Attack Path.
+5. Within the graph, you can see the traffic flow and the complete attack path. The traffic enters through the **Internet Gateway** and hits the **Sales and Trading cnsp-app4** EC2 instance. This instance has an IAM role **sales-trading-admin-role-cnsp-app4** attached to it, which has wildcard access to S3 bucket and also access to **prisma-cloud-pcds-bucket** S3 Bucket. As this instance is vulnerable to SQL and Code injection attacks, the attacker can potentially perform a Data exfiltration from the S3 bucket through the compromised host. This is represented by the Attack Path.
 6. Within the graph, clicking on the Vulnerabilities Icon and clicking on any Vulnerability will provide more information about the vulnerability. On the selected Vulnerability. clicking on View Details will open an additional findings sidecar.
 
     ![alt text](/resources/pcs-screen-27.png)
@@ -46,7 +46,7 @@ Note: If you do not see the same graph as in the below screenshot, then it’s p
     
     ![alt text](/resources/pcs-screen-30.png)
 
-9. Within the Sales and Trading cnsp-eu VM sidecar, click on the Vulnerabilities tab to see all the Vulnerabilities that were detected for this VM. Further clicking on options such as Critical & High , Exploitable and Patchable will filter the results.
+9. Within the Sales and Trading cnsp-app4 VM sidecar, click on the Vulnerabilities tab to see all the Vulnerabilities that were detected for this VM. Further clicking on options such as Critical & High , Exploitable and Patchable will filter the results.
     
     ![alt text](/resources/pcs-screen-31.png)
 
@@ -126,4 +126,4 @@ Identifying critical risks is just the beginning. Prisma Cloud assists with elim
     * Manual Fix - click on the **Manual Fix** button, allowing the user to open a ticket for this misconfiguration so that the right team (workload owner) could assist on remediating the misconfiguration.
 By having different actionable items on a single plane of glass allows security team to review and react to any attack path detected, and reduce or close off the attack path, so that the security risks can be minimized. 
 
-There are also other attack path alerts that you can view via the alert page, feel free to run through them. Once you're done, you can move on to the next section [here](/04-C2CVulMgmt.md)
+There are also other attack path alerts that you can view via the alert page, feel free to run through them. Once you're done, you can move on to the next section [here](/04-Assignment-2-1.md)
