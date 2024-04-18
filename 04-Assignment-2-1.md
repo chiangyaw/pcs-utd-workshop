@@ -93,95 +93,32 @@ alias kubectl='k3s kubectl'
 kubectl get pods -A
 ```
 
+
 #### Setup Prisma Cloud Defender in Kubernetes
 1. Login via SSH to the Kubernetes VM.
 
-2. Run the command to examine the setup script:
-```
-cat /home/sysadmin/apps/02-install-defender.sh
-```
-
-3. When ready, run the script:
+2. When ready, run the script:
 ```
 bash /home/sysadmin/apps/02-install-defender.sh
 ```
 ![alt text](/resources/k8s-screen-22.png)
 
-4. Run the following command to see the status of the defender deployment:
+3. Run the following command to see the status of the defender deployment:
 ```
 kubectl -n twistlock get pod -o wide
 ```
 ![alt text](/resources/k8s-screen-23.png)
 
-5. Head over to Prisma Cloud Compute Edition Console > Manage > Defenders to verify the successful deployment. It might take 1-2 mins for the defender to show up as active.
+4. Head over to Prisma Cloud Compute Edition Console > Manage > Defenders to verify the successful deployment. It might take 1-2 mins for the defender to show up as active.
 
 ![alt text](/resources/pcce-screen-53.png)
 
-6. Navigate to Prisma Cloud Compute Edition Console > Radars > Hosts to see the newly added Kubernetes host. If you don’t see it yet, click on the Refresh icon.
+5. Navigate to Prisma Cloud Compute Edition Console > Radars > Hosts to see the newly added Kubernetes host. If you don’t see it yet, click on the Refresh icon.
 
 ![alt text](/resources/pcce-screen-54.png)
 
-7. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
+6. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
 
-#### Setup Kubernetes Auditing and Admission Control
-Kubernetes Auditing and Admission Control allows you to setup create security guardrails in your Kubernetes environment by enforcing policies such as protecting against misconfigured or overprivileged pods etc.
-
-1. Navigate to Prisma Cloud Compute Edition Console > Defend > Access and select Kubernetes tab and enable Kubernetes auditing.
-
-![alt text](/resources/pcce-screen-55.png)
-
-2. Click on Add Rule > Select from existing rules
-
-![alt text](/resources/pcce-screen-56.png)
-
-3. Select all the rules in the and click on Add
-
-![alt text](/resources/pcce-screen-57.png)
-
-4. Navigate to Prisma Cloud Compute Edition Console > Defend > Access and select Admission tab and enable Admission Control.
-
-![alt text](/resources/pcce-screen-59.png)
-
-#### Setup ArgoCD
-Argo CD is a continuous delivery tool that lets you deploy your application on a Kubernetes cluster. We will be using Argo CD to deploy Bank-Of-Anthos application from the previous activities on our Kubernetes cluster.
-
-1. Run the command to examine the ArgoCD setup script, which sets up required kubernetes namespaces and other things: 
-```
-cat /home/sysadmin/apps/01-argo-setup.sh
-```
-
-2. When ready, run the script:
-```
-bash /home/sysadmin/apps/01-argo-setup.sh
-```
-![alt text](/resources/k8s-screen-25.png)
-
-3. Once the script executes successfully, scroll down to the end of the script output to retrieve the login credentials. 
-![alt text](/resources/k8s-screen-27.png)
-
-*Note: You are not required to login to ArgoCD GUI for the activities below. However, you can still login with the GUI with the login credentials. You can head over to Application Portal > ArgoCD tile and login using the credentials.*
-
-#### Deploy QA App on Kubernetes Cluster
-1. Login via SSH to the Kubernetes VM.
-
-2. Run the following command to see the application that we are
-deploying:
-```
-cat /home/sysadmin/apps/02-qa-argo-app.yaml
-```
-
-3. When ready, apply manifest:
-```
-kubectl apply -f /home/sysadmin/apps/02-qa-argo-app.yaml
-```
-
-4. It takes about 1-2 mins for the application to be ready. You can run the following to check on the status:
-```
-kubectl -n qa get pods
-```
-![alt text](/resources/k8s-screen-24.png)
-
-*Note: The activities below would not require you to access the Bank of Anthos application. However, you can still navigate to the Application Portal and access the bank-of-anthos application.*
 
 #### Check Container Model States
 1. Head over to Kubernetes VM and run the below commands to understand the setup and workloads that we’ll be investigating.
