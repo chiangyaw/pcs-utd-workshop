@@ -69,11 +69,11 @@ Note: If you do not see the same graph as in the below screenshot, then it’s p
     ![alt text](/resources/pcs-screen-37.png)
 
     * Here, Prisma Cloud has identified that there’s sensitive data stored within the S3 Bucket that the compromised host has access to and is at risk of data exfiltration. To identify and detect confidential and sensitive data, Prisma Cloud Data Security integrates with Palo Alto Network's Enterprise DLP service and provides built-in data profiles, which include data patterns that match sensitive information such as PII, health care, financial information and Intellectual Property.
-    * On the bucket, if you go to page 3, you can see more findings and clicking on 22_all_patterns_test.txt will show you more findings
+    * On the bucket, click on any file, it will show you more findings
 
     ![alt text](/resources/pcs-screen-38.png)
 
-12. Close the Snippets pop up. Close the Object sidecar and close the S3 bucket sidecar. Close the Sales and Trading cnsp-eu sidecar
+12. Close the Snippets pop up. Close the Object sidecar and close the S3 bucket sidecar. Close the Sales and Trading cnsp-app4 sidecar
     
     ![alt text](/resources/pcs-screen-39.png)
 
@@ -83,6 +83,7 @@ Note: If you do not see the same graph as in the below screenshot, then it’s p
     ![alt text](/resources/pcs-screen-41.png)
 
 14. Click on the SQL Injection and click on View Additional Finding Details. You will now be directed to the Prisma Cloud Runtime Security WaaS (Web Application and API Security) console, which was responsible for detecting this attack. Here we will be able to see more information about the attack.
+Note: to add Date to the filter with start date:1 Nov 2023 and end date: current.
 
     ![alt text](/resources/pcs-screen-42.png)
 
