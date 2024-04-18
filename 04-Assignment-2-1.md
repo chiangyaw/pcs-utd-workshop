@@ -355,10 +355,6 @@ kubectl -n qa exec -it deploy/manual-run -- bash /opt/manual-run.sh
 
     ![alt text](/resources/pcce-screen-37.png)
 
-3. Run the below command in Docker-Workstation VM to clean up containers from previous task to free up some resources:
-```
-docker stop registry
-```
 
 ### Runtime Security II
 Identify and prevent vulnerabilities across the entire application lifecycle while prioritizing risk for your cloud native environments. Integrate vulnerability management into any process, while continuously monitoring, identifying, and preventing risks to all the hosts, images, and functions in your environment. Prisma Cloud combines vulnerability detection with an always up-to-date threat feed and knowledge about your runtime deployments to prioritize risks specifically for your environment.
