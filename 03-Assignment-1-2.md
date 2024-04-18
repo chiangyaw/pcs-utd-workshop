@@ -24,7 +24,7 @@ Hint: As you navigate the alerts view in the Prisma Cloud console you can click 
 Notes: SQL and Code Injection attacks were detected is a custom search policy and Alert rule that was created for the purpose of the lab by leveraging out of the box Prisma Cloud policies. This is done for ease of use and convenience of lab experience. As a user, you can also create custom policy as such to meet your organization needs.
 3. Click on the **SQL and Code Injection attacks were detected** result and click on the Sales and Trading cnsp-eu under Asset Name column.
     
-    ![alt text](/resources/pcs-screen-24.png)
+ ![alt text](/resources/pcs-screen-24.png)
 
 4. This should bring up details about this instance and contains more findings and information about the attacks.The Overview tab contains the overview of this VM. Clicking on the Attack Path will reveal how the attack occurred and the resources involved in it.
 Note: If you do not see the same graph as in the below screenshot, then it’s possible that the resource is involved in more than once incident and an alert. You can change the view by clicking on the Alert dropdown menu and selecting SQL and Code Injection attacks were detected as shown in the below screenshot
