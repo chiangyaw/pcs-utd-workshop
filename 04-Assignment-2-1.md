@@ -4,7 +4,7 @@
 The Application Portal is one stop shop for all the applications that are used in this workshop. Under the hood, it utilizes Kasm Workspaces, which is a streaming platform for delivering browser-based access to applications, and web services and this setup is running as a docker container within the Docker workstation. Within this workspace, Chrome browser is preinstalled and it provides a secure and isolated browsing environment.
 
 Below are the steps to access the Application Portal:
-1. Select the Application Portal tab to open the portal.
+1. In the CloudShare page, select the Application Portal tab to open the portal.
 2. Credentials: kasm_user/p@lo@lto
 
     ![alt text](/resources/applicationportal-login-1.png)
@@ -26,7 +26,7 @@ Below are the steps to access the Application Portal:
 The Kubernetes VM provided in this workshop is running a single node Kubenetes cluster launched via k3s. Within the lab, you will be working with this VM to perform various things such as deploying Prisma Cloud defender, Argo CD, running log4j attacks etc.
 
 To access and login to Kubernetes VM, follow these steps:
-1. Select the Kubernetes tab to open the ssh terminal that is already logged in to this VM. If not already logged in, use the CloudShare interface to login.
+1. In the CloudShare page, select the Kubernetes tab to open the ssh terminal that is already logged in to this VM. If not already logged in, use the CloudShare interface to login.
 
 
 ### Log in to Prisma Cloud Compute Edition Console
@@ -79,7 +79,7 @@ In this activity you will:
 * Test and review event logs to confirm activity
 
 #### Setup Kubernetes Cluster
-1. Go back to the main portal, select the Kubernetes tab, this logs in via SSH to the Kubernetes VM.
+1. In the CloudShare page, select the Kubernetes tab, this logs in via SSH to the Kubernetes VM.
 
 2. Run the following script to setup your Kubernetes cluster (it will take approximately less than 2 mins for the creation to be complete):
 ```
@@ -95,7 +95,7 @@ kubectl get pods -A
 
 
 #### Setup Prisma Cloud Defender in Kubernetes
-1. Login via SSH to the Kubernetes VM.
+1. In the CloudShare page, select the Kubernetes tab, this logs in via SSH to the Kubernetes VM.
 
 2. When ready, run the script:
 ```
