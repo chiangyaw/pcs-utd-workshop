@@ -119,44 +119,6 @@ kubectl -n twistlock get pod -o wide
 
 6. We have now successfully deployed Prisma Cloud Defender on the Kubernetes cluster.
 
-#### Setup ArgoCD
-Argo CD is a continuous delivery tool that lets you deploy your application on a Kubernetes cluster. We will be using Argo CD to deploy Bank-Of-Anthos application from the previous activities on our Kubernetes cluster.
-
-1. Run the command to examine the ArgoCD setup script, which sets up required kubernetes namespaces and other things: 
-```
-cat /home/sysadmin/apps/01-argo-setup.sh
-```
-
-2. When ready, run the script:
-```
-bash /home/sysadmin/apps/01-argo-setup.sh
-```
-![alt text](/resources/k8s-screen-25.png)
-
-3. Once the script executes successfully, scroll down to the end of the script output to retrieve the login credentials. 
-![alt text](/resources/k8s-screen-27.png)
-
-*Note: You are not required to login to ArgoCD GUI for the activities below. However, you can still login with the GUI with the login credentials. You can head over to Application Portal > ArgoCD tile and login using the credentials.*
-
-#### Deploy QA App on Kubernetes Cluster
-1. Login via SSH to the Kubernetes VM.
-
-2. Run the following command to see the application that we are
-deploying:
-```
-cat /home/sysadmin/apps/02-qa-argo-app.yaml
-```
-
-3. When ready, apply manifest:
-```
-kubectl apply -f /home/sysadmin/apps/02-qa-argo-app.yaml
-```
-
-4. It takes about 1-2 mins for the application to be ready. You can run the following to check on the status:
-```
-kubectl -n qa get pods
-```
-![alt text](/resources/k8s-screen-24.png)
 
 #### Check Container Model States
 1. Head over to Kubernetes VM and run the below commands to understand the setup and workloads that we’ll be investigating.
