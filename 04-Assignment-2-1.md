@@ -201,12 +201,6 @@ kubectl -n qa exec -it deploy/manual-run -- bash /opt/manual-run.sh
 
 ![alt text](/resources/pcce-screen-9.png)
 
-5. Navigate to Prisma Cloud > Monitor > Events > Admission Audits and clear the existing filter. Set the following filter: Operation: Connect
-
-![alt text](/resources/pcce-screen-10.png)
-
-6. This will list out the events where you/someone connected to a Pod (step 1 of this task). You can click on the result and view the event. When done, click close.
-
 #### Runtime Network Control for DNS
 1. Navigate to Prisma Cloud > Monitor > Events > Container Audits and clear the existing filter.
 
@@ -285,13 +279,6 @@ kubectl -n qa exec -it deploy/manual-run -- bash /opt/manual-run.sh
 
     ![alt text](/resources/k8s-screen-6.png)
 
-    * Network Defense - III : ```curl 1.1.1.1```
-
-    ![alt text](/resources/k8s-screen-7.png)
-
-    * The previous command will terminate the shell. To reinitiate, run the below command:
-    ```
-    kubectl -n qa exec -it deploy/manual-run sh
     ```
     * Filesystem (defense against modified binary) : ```gcc /tmp/main2.c -o /usr/bin/main3.o```
 
