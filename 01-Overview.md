@@ -10,4 +10,21 @@ Before beginning of this workshop, make sure you have a laptop/desktop with a re
 ![alt text](/resources/cloudshare-screen-1.png)
 Note: You can leverage the **keyboard > send text** feature inside of CloudShare when the guide instructs you to copy/paste linux commands. Also note that when copying/pasting commands, make sure to remove the line breaks if any before commands are executed.
 
+### Set up your Prisma Cloud Enterprise Access
+To get started with getting access to Prisma Cloud, you need to set up a password for your account
+1. Head over to CloudShare > Email . Notice that the email address is prepopulated. Do not alter this.
+![alt text](/resources/cloudshare-screen-2.png)
+3. Use the password (s3curE_pa5Sw0rD) to authenticate and access your lab email account. Ensure that you are not copying preceding white spaces
+![alt text](/resources/cloudshare-screen-3.png)
+5.Once you login to your email account, copy the email address from the top left corner of your screen. If the email address is in a truncated view, you can expand the column to reveal the full email address.
+![alt text](/resources/cloudshare-screen-4.png)
+6. You can also see that you have received an email for a password reset. This email will help you get setup with an initial password for your Prisma Cloud account.
+7. Click on the email to open it. Within the email, click on Reset My Password.
+![alt text](/resources/cloudshare-screen-5.png)
+8. Set your desired password and click on Change Password.
+9. Once the password is reset, you should be redirected back to the login page. You should also receive an email indicating that the password reset was successful. On the Prisma cloud login page, you can use the email that you had copied previously and the new password that you had set.
+10. Once you have successfully logged in, you should arrive at a screen click on Start Using Prisma Cloud
+![alt text](/resources/cloudshare-screen-6.png)
+
+
 Once you are able to access the items above, you can move on to the next section [here](/02-Assignment-1-1.md)!
