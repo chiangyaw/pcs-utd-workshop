@@ -14,9 +14,11 @@ In this activity, you will:
 1. To get started with getting access to Prisma Cloud, you need to set up a password for your account. Head over to CloudShare > Email . Notice that the email address is prepopulated. Do not alter this. Use the below password to authenticate and access your lab email account. Ensure that you are not copying preceding white spaces
 
 password: s3curE_pa5Sw0rD
+
     ![alt text](/resources/cloudshare-pcslogin-screen-1.png)
 
 Note: Ensure that Keep me logged in is enabled on the email login page.
+
     ![alt text](/resources/cloudshare-pcslogin-screen-2.png)
 
 2. To get started with getting access to Prisma Cloud, you need to set up a password for your account. Head over to CloudShare > Email . Notice that the email address is prepopulated. Do not alter this. Use the below password to authenticate and access your lab email account. Ensure that you are not copying preceding white spaces
