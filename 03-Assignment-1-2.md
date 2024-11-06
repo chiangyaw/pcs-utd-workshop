@@ -110,6 +110,10 @@ Note: Below screenshot might look different in your case as some menus are colla
 
 All the findings contributed to an attack path, which might lead to a data breach in the customer environment. Prisma Cloud detects what might potentially go wrong (misconfiguration) and what has already gone wrong (actual attack), and combining these information on the same single plane of glass. By having this information detected by Prisma Cloud, users can choose different ways to remediate the risks discovered.
 
+20. Click on the App Firewall tab and you should see the SQL Injection and other items (Grayed out because the lab role is a read-only role and doesn’t have permissions to change settings), which can be set to Prevent or Ban to prevent these attacks
+
+    ![alt text](/resources/pcs-screen-47.png)
+
 #### Prisma Cloud Code to Cloud Remediation
 Identifying critical risks is just the beginning. Prisma Cloud assists with eliminating the root cause through its unique Code to Cloud remediation capability. This approach enables security teams to address the issue at its source.
 
@@ -126,5 +130,24 @@ Identifying critical risks is just the beginning. Prisma Cloud assists with elim
     * Fix in Code - click on the **Fix in Code** button, allowing the user to fix the misconfiguration on Infrastructure as Code (IaC).
     * Manual Fix - click on the **Manual Fix** button, allowing the user to open a ticket for this misconfiguration so that the right team (workload owner) could assist on remediating the misconfiguration.
 By having different actionable items on a single plane of glass allows security team to review and react to any attack path detected, and reduce or close off the attack path, so that the security risks can be minimized. 
+
+#### Prisma Cloud CIEM
+Cloud Infrastructure Entitlement Management (CIEM) provides users with broad visibility into effective permissions, continuously monitors multicloud environments for risky and unused entitlements, and automatically makes least privilege recommendations.
+
+1. Click on identity/role icon with **sales-trading-admin-role-cnsp-app** and select View Details
+
+    ![alt text](/resources/pcs-iam-screen-1.png) 
+
+2. Click on Alerts tab and the Alert of policy **AWS IAM Groups and Roles with IAM Metadata Write permsssions are unused for 90 days**
+
+    ![alt text](/resources/pcs-iam-screen-2.png)    
+
+3. Review Remediation Guide and click on **Investigate** button
+
+    ![alt text](/resources/pcs-iam-screen-3.png) 
+
+4. Review the Actions and Last Access to observe the various write permissions attached and the last usage time
+
+    ![alt text](/resources/pcs-iam-screen-4.png)    
 
 There are also other attack path alerts that you can view via the alert page, feel free to run through them. Once you're done, you can move on to the next section [here](/04-Assignment-2-1.md)

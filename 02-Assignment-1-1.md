@@ -12,16 +12,11 @@ In this activity, you will:
 Note: This is a standalone activity and is not dependent on other activities.
 
 #### Log in to Prisma Cloud Enterprise Edition Console
-1. Click on the Prisma Cloud Enterprise tab to open the demo tenant login.
+1. Click on the Prisma Cloud Enterprise tab to open the demo tenant page.
 
-    ![alt text](/resources/pcs-screen-1.png)
-
-2. Follow the screen to login and then click on the Prisma Cloud icon.
+2. Leverage credentials in Assignment 1-0 to login to tenant
     
-    *Note: If you see a page expired message then refresh the web page by clicking on the Home button as highlighted in below screen capture.*
-3. While using the Prisma Cloud console, you can use CloudShare > Keyboard > Home | Back | Forward to navigate back and forth.
-
-    ![alt text](/resources/pcs-screen-2.png)
+3. Tenant loads to display the Home screen which summarises the key findings on the platform
 
 4. To check the on-boarded public cloud accounts click on the Settings on the and select Account Groups. Click on the 4 Cloud Account(s) under Default Account Group. You can see the public cloud accounts connected to this Prisma Cloud demo account.
 Note: The screenshots captured in this workshop guide might vary slightly from the actual lab account.
