@@ -51,4 +51,4 @@ For this lab, you will need to log into another tenant. Details will be shared b
 
     ![alt text](/resources/App_SBOM_Generate.png)
 
-You have completed the Prisma cloud Ultimate Test Drive (UTD) Workshop. You can head over to the summary section [here](/06-Summary.md).
+You have completed the Prisma cloud Ultimate Test Drive (UTD) Workshop. You can head over to the summary section [here](/07-Summary.md).

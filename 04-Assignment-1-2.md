@@ -150,4 +150,4 @@ Cloud Infrastructure Entitlement Management (CIEM) provides users with broad vis
 
     ![alt text](/resources/pcs-iam-screen-4.png)    
 
-There are also other attack path alerts that you can view via the alert page, feel free to run through them. Once you're done, you can move on to the next section [here](/04-Assignment-2-1.md)
+There are also other attack path alerts that you can view via the alert page, feel free to run through them. Once you're done, you can move on to the next section [here](/05-Assignment-2-1.md)

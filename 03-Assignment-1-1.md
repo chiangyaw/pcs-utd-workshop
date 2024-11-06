@@ -109,6 +109,4 @@ Note: The lab uses a read-only user, which doesn’t have access to generate a c
     Note: You can schedule a compliance report to be sent to specific team or team members in a regular basis (weekly, daily, etc).
 
 
-
-
-Once you are able to access Prisma Cloud Enterprise Edition Console, you can move on to the next section [here](/03-Assignment-1-2.md)!
+Once you are able to access Prisma Cloud Enterprise Edition Console, you can move on to the next section [here](/04-Assignment-1-2.md)!
